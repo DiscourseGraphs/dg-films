@@ -59,7 +59,7 @@ When it asked which build testers run: "main build whatever the current main is 
 
 - "atleast make one so i can see it na": get a preview out early, before polishing everything.
 - "remember no audio": a silent film stays silent.
-- "can you make [it] a little bit under 20 mb": the two-pass encode in the README.
+- "can you make [it] a little bit under 20 mb": the two-pass encode in `docs/technical.md`.
 
 ### Start a new session on an existing series
 

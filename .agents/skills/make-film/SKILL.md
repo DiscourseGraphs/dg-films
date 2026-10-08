@@ -5,7 +5,7 @@ description: Make, revise or review a silent Discourse Graphs product film with 
 
 # Make a film
 
-A film here is code: an episode folder under `motion/films/` that the engine renders frame by frame. `README.md` has the setup and commands, `AGENTS.md` the hard rules, `motion/README.md` the engine, and `tutorial-series/PLAN.md` the One Question series and its rules. Read them before the first step. This skill is the order of work.
+A film here is code: an episode folder under `motion/films/` that the engine renders frame by frame. `docs/technical.md` has the setup and commands, `AGENTS.md` the hard rules and how to work with the person, `motion/README.md` the engine, and `tutorial-series/PLAN.md` the One Question series and its rules. Read them before the first step. This skill is the order of work.
 
 ## 1. Pin the brief
 
@@ -15,7 +15,7 @@ A film here is code: an episode folder under `motion/films/` that the engine ren
 
 ## 2. Script first, then build
 
-- Write the script before any code: one row per beat with its headline and what the picture shows. For One Question, use the grammar in PLAN.md and put the script where the team keeps scripts (a PR description or the episode's `data.ts` header).
+- Write the script before any code: one row per beat with its headline and what the picture shows. For One Question, use the grammar in PLAN.md and show it to the person as a plain table and wait for their OK before building. Keep it with the episode (the PR description or the episode's `data.ts` header).
 - Check that it gets through before building: give a fresh agent the headline list alone and ask "What steps does a user take, and what do they get?" It passes when it names the move, most steps in order, and the payoff.
 - If someone asks whether a script is the best it can be, run a **blind fresh take** as well as any critique: a pass given only the goal, the audience, the constraints and the product facts, told not to read the existing script, which proposes several concepts and writes one in full. A critique that sees the draft anchors on it. Compare the two and give one recommendation, not a menu.
 
@@ -50,9 +50,9 @@ Fix what fails, then re-run only that check.
 ## 7. Render and post
 
 - `render <film> --crf 8 --preset slow --only 1080p`. 1080p60 is the master.
-- If the file is over 20 MB, make a second copy with the two-pass encode in README.md. Keep the master.
+- If the file is over 20 MB, make a second copy with the two-pass encode in `docs/technical.md`. Keep the master.
 - Silent films carry their story in the headlines. Never add a voice to a film made silent unless asked.
-- Report: where the mp4 is, its length and size, and every detail you drew without a source to check it against.
+- Send the person the mp4 itself, with its length and size, and list every detail you drew without a source to check it against.
 
 ## Working habits
 

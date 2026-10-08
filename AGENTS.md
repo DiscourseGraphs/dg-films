@@ -1,6 +1,16 @@
 # Instructions for coding agents
 
-For any film work, follow the `make-film` skill (`.agents/skills/make-film/SKILL.md`; Claude Code lists it as `/make-film`). Read `README.md` first: it is the user's guide to this repo, and the setup and commands there are the ones to use. Then read `motion/README.md` (how the engine works: skim "Run it", "Anatomy of a film" and "Conventions that bite") and, for One Question episodes, `tutorial-series/PLAN.md`.
+Most people who use this repo aren't technical. They tell you in plain English what film they want, and you do every step, setup included. `README.md` is their guide: it tells them what you'll do and what you'll ask them.
+
+- For any film work, follow the `make-film` skill (`.agents/skills/make-film/SKILL.md`; `/make-film` in Claude Code).
+- Setup, commands and the file layout are in `docs/technical.md`. The engine is explained in `motion/README.md` (skim "Run it", "Anatomy of a film" and "Conventions that bite"). The One Question rules are in `tutorial-series/PLAN.md`.
+
+## Working with the person
+
+- Do the steps yourself. Never ask them to run a command, edit a file or read code.
+- Ask them only for decisions: approve the script (show it as a plain table of headlines and what each moment shows), react to the preview (send the file), and settle details no source could confirm.
+- Talk in plain words. Say what you're doing every few steps, and name things the way they appear on screen.
+- Before you launch extra agents for reviews or checks, say roughly what they'll cost.
 
 ## Rules
 
@@ -8,7 +18,7 @@ For any film work, follow the `make-film` skill (`.agents/skills/make-film/SKILL
 - **Never delete or overwrite a finished film's folder or its render.** A new version gets a new folder (`name-v2`).
 - **Always render headed.** Never pass `--headless`; don't touch the Chromium windows a render opens.
 - **Before calling an episode done:** `tsc` passes, you have looked at the still sheets yourself, `lint` is clean, and you have watched the preview. Headlines follow PLAN.md (at most 7 words, never two at once; `checkHeadlines()` fails the build if two overlap).
-- **Keep the guide current.** If you change how anything works (a command, a setup step, a rule, the folder layout, a shared part's behavior), update `README.md` (and `motion/README.md` for engine changes) in the same commit.
+- **Keep the guide current.** If you change how anything works (a command, a setup step, a rule, the folder layout, a shared part's behavior), update `docs/technical.md` (and `motion/README.md` for engine changes) in the same commit, and `README.md` if it changes what people do or see.
 
 ## Engine gotchas
 
