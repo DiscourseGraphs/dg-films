@@ -40,6 +40,21 @@ Open your agent in the `dg-films` folder and say what you want. For example:
 
 > Make a copy of the Zotero film that's small enough to post on Slack.
 
+### Bigger projects
+
+It can take on a whole project, not just one film. For example:
+
+> Make a series of short onboarding films from the template graph's tutorials. Pick the ten that would help a new user most, put them in an order where each one makes people want the next, and show me the plan before you build anything. Start with the first three.
+
+> Make a 90-second film that explains Discourse Graphs to people who've never used Roam: the problem it solves, not how each setting works. Use discoursegraphs.com.
+
+> Make a film for our team on how to alpha test push and pull: which settings to turn on, opening the import dialog, sharing nodes. The Roam side only.
+
+For a project like these, expect:
+- **A plan first.** Which films, in what order, and what each one shows. You approve it before anything is built.
+- **Films in batches.** It makes a few, sends them, and takes your notes into the next ones.
+- **Several sessions.** A big project can outlast one conversation. It keeps its notes in the repo, and at the end of a session it gives you a message to start the next one. Saying "Continue the onboarding films" works too.
+
 What helps the result:
 - **Who it's for** and **where it will be posted**.
 - **The one thing** a viewer should be able to do afterwards.

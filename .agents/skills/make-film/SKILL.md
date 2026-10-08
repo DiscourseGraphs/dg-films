@@ -54,6 +54,15 @@ Fix what fails, then re-run only that check.
 - Silent films carry their story in the headlines. Never add a voice to a film made silent unless asked.
 - Send the person the mp4 itself, with its length and size, and list every detail you drew without a source to check it against.
 
+## Bigger projects
+
+For a series or several films, add these around the steps above:
+
+- **Plan before scripts.** Write the plan in a folder for the project (like `tutorial-series/`): which films, in what order, why, what each shows, and the rules they share. Check the facts it depends on against the code. Get the person's OK before building.
+- **Shared parts first.** Put what the films share (the world, the look, the end card) in `motion/films/<series>/shared/`, so every film matches.
+- **Batches.** Build a few films, send them, and fold the notes into the rest.
+- **Hand off between sessions.** Keep a `HANDOFF.md` in the project folder current: what's done, what's next, open questions. Before the session ends, write a starter prompt (`NEXT-SESSION-PROMPT.md`) and give it to the person, so a new session picks up where this one stopped. When they say "continue <project>", start from those two files.
+
 ## Working habits
 
 - Say in a line what you are doing every few steps. Never go quiet through a long build.
