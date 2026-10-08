@@ -69,7 +69,7 @@ ffmpeg -i in.mp4 -map 0:v -map_chapters 0 -c:v libx264 -preset slow -b:v 3400k -
 
 ## Making an episode
 
-The fastest way is with a coding agent (Claude Code or similar) started in this repo. It reads `AGENTS.md` first. A good first message:
+The fastest way is with a coding agent (Claude Code or similar) started in this repo. It reads `AGENTS.md` first, and the `make-film` skill (`.agents/skills/make-film/`, `/make-film` in Claude Code) gives everyone's agent the same order of work: brief, script, build, look, preview, check, render. A good first message:
 
 > Make episode N of One Question, "<title>", from the template graph's Tutorial/<page>. Read tutorial-series/PLAN.md (its "Rules for every episode") and motion/README.md, then follow the pattern of motion/films/one-question/oq03-papers. Write the script first: the headlines and what each beat shows. Then build it, look at the stills, lint, preview, and render the final.
 
