@@ -6,10 +6,10 @@ Download them from the repo's [examples release](https://github.com/DiscourseGra
 
 | File | What it is | Length |
 |---|---|---|
-| `ep0-one-sentence-explainer.mp4` | "One sentence": Roam and Discourse Graphs for newcomers, from the problem down. Its source isn't in this repo; it shows a second style the engine does. | 1:35 |
-| `ep1-highlight-its-a-node.mp4` | One Question 1: select a finding, make it Evidence; `\` then C makes a Claim. Source: `motion/films/one-question/oq01-highlight-v2`. | 0:44 |
-| `ep2-say-what-the-evidence-supports.mp4` | One Question 2: the context button, Add relation, Supports, the claim. Source: `oq02-supports`. | 0:39 |
-| `ep3-bring-your-papers-in.mp4` | One Question 3: ZoteroRoam import, then cite with `[[@`. Source: `oq03-papers`. | 0:40 |
+| `ep0-one-sentence-explainer.mp4` | What Discourse Graphs is, for newcomers: the problem it solves, from the top down. (Made separately; its source isn't in this repo.) | 1:35 |
+| `ep1-highlight-its-a-node.mp4` | How to make a node: select a finding in your notes and turn it into Evidence, then make a Claim from the keyboard. | 0:44 |
+| `ep2-say-what-the-evidence-supports.mp4` | How to connect two nodes: say which claim a piece of evidence supports. | 0:39 |
+| `ep3-bring-your-papers-in.mp4` | How to bring papers in: import one from Zotero, then cite it in your notes. | 0:40 |
 
 ## Prompts that made them
 

@@ -2,7 +2,7 @@
 
 Short, silent product films for Discourse Graphs. You say what film you want in plain English, and your AI agent makes it.
 
-See what it makes: [the example films](https://github.com/DiscourseGraphs/dg-films/releases/tag/examples-2026-10). The first series is **One Question**, short onboarding films for Slack and the newsletter. Episodes 1 to 3 cover making a node, making a relation, and bringing your papers in from Zotero.
+So far it has made four short onboarding films for Slack and the newsletter: what Discourse Graphs is, how to make a node, how to connect two nodes, and how to bring papers in from Zotero. [Watch them here.](https://github.com/DiscourseGraphs/dg-films/releases/tag/examples-2026-10)
 
 ## How it works
 
@@ -11,7 +11,7 @@ You describe the film. Your agent does every step:
 1. It reads the extension's code, real screenshots and the template graph, so every label, menu and color matches the product.
 2. It writes a script (the headlines and what each moment shows) and asks you to approve it.
 3. It builds the film, checks every frame itself, and sends you a quick preview.
-4. After your OK, it makes the final video: 1080p, silent, under 20 MB, ready for Slack, Loom or the newsletter.
+4. After your OK, it makes the final video: full HD, silent, under 20 MB, ready for Slack, Loom or the newsletter.
 
 Nothing is screen-recorded, so you don't need a demo graph or a clean screen. Changing a word later is a quick ask.
 
@@ -26,19 +26,19 @@ Then open your agent in an empty folder and say:
 
 > Set up github.com/DiscourseGraphs/dg-films for me. Follow its docs/technical.md, and show me a test frame when it works.
 
-It installs what it needs and shows you a frame from episode 1. While it makes a film, browser windows will open and close on their own for a minute or so; leave them alone.
+It installs what it needs and shows you a frame from one of the existing films. While it makes a film, browser windows will open and close on their own for a minute or so; leave them alone.
 
 ## Make a film
 
 Open your agent in the `dg-films` folder and say what you want. For example:
 
-> Make episode 4 of One Question, "Lay out the argument", from the template graph's Tutorial/Using the Canvas.
+> Make a short film that shows new users how to lay out an argument on the canvas. Base it on the template graph's "Using the Canvas" tutorial.
 
 > Make a 45-second film for new users that shows how to turn a highlighted sentence into a Claim.
 
-> In episode 2, change the headline "Open its context." to "Open the evidence's context." and make a new version.
+> In the film about connecting two nodes, change the headline "Open its context." to "Open the evidence's context." Keep the old film too.
 
-> Make a copy of episode 3 that's under 20 MB.
+> Make a copy of the Zotero film that's small enough to post on Slack.
 
 What helps the result:
 - **Who it's for** and **where it will be posted**.
@@ -62,5 +62,5 @@ What helps the result:
 ## More
 
 - [examples/README.md](examples/README.md): the films so far and the prompts behind them.
-- [tutorial-series/PLAN.md](tutorial-series/PLAN.md): the One Question plan, episode list and rules.
+- [tutorial-series/PLAN.md](tutorial-series/PLAN.md): the plan behind the onboarding films: which films, in what order, and the rules they follow.
 - [docs/technical.md](docs/technical.md): setup, commands and file layout, for agents and developers.

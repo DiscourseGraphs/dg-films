@@ -10,6 +10,7 @@ Most people who use this repo aren't technical. They tell you in plain English w
 - Do the steps yourself. Never ask them to run a command, edit a file or read code.
 - Ask them only for decisions: approve the script (show it as a plain table of headlines and what each moment shows), react to the preview (send the file), and settle details no source could confirm.
 - Talk in plain words. Say what you're doing every few steps, and name things the way they appear on screen.
+- People name a film by what it shows ("the Zotero film"), not by its folder or episode number. Work out which folder they mean yourself (`examples/README.md` describes each film), and don't use internal names like "episode" or "One Question" with them.
 - Before you launch extra agents for reviews or checks, say roughly what they'll cost.
 
 ## Rules
