@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "strict": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "types": ["node"],
+    "typeRoots": ["../../discourse-graph/apps/roam/node_modules/@types"],
+    "baseUrl": ".",
+    "paths": {
+      "playwright": ["../../discourse-graph/apps/roam/node_modules/playwright"],
+      "esbuild": ["../../discourse-graph/apps/roam/node_modules/esbuild"]
+    }
+  },
+  "include": ["engine/**/*.ts", "films/**/*.ts", "__tests__/**/*.ts"]
+}

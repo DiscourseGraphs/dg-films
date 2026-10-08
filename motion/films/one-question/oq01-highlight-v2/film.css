@@ -1,0 +1,157 @@
+/* Episode 1 v2: the two lines that become nodes, the sidebar, the key caps and the
+   end card's glimpse. The series look is in ../shared/skin.css. v2 follows the
+   truth pass (tutorial-series/tests/oq01/truth-pass.md) and tutorial-series/evidence/. */
+
+/* Roam's layout with the right sidebar: the top bar and the page belong to the main
+   column; the sidebar runs the full height beside them (evidence/sidebar-new-node-g100.png). */
+.k-roam {
+  --sw: 560px;
+}
+.k-rm-top,
+.k-rm-main {
+  right: var(--sw);
+}
+.tl-side {
+  top: 0;
+  width: var(--sw);
+  padding: 14px 14px 0 22px;
+  border-left: 1px solid var(--roam-side-line);
+  z-index: 4;
+}
+
+/* A line holds its plain text and the link it becomes; .done shows the link. */
+.morph .nd {
+  display: none;
+}
+.morph.done .nd,
+.morph.made .nd {
+  display: inline;
+}
+.morph.done .tl-sel,
+.morph.done .tl-caret,
+.morph.made .tl-sel,
+.morph.made .tl-caret {
+  display: none;
+}
+.morph .tl-ref {
+  --flash: 0;
+  border-radius: 4px;
+  background: color-mix(in srgb, var(--k) calc(var(--flash) * 16%), transparent);
+  box-shadow: 0 0 0 calc(var(--flash) * 5px) color-mix(in srgb, var(--k) calc(var(--flash) * 16%), transparent);
+}
+
+/* The sidebar: the claim's window opens above the evidence's. */
+.sw-wrap {
+  --open: 1;
+  max-height: calc(var(--open) * 640px);
+  opacity: var(--open);
+  overflow: hidden;
+}
+.sw-title .sw-raw {
+  display: none;
+}
+.sw-title.editing .sw-raw {
+  display: inline;
+}
+.sw-title.editing .sw-done {
+  display: none;
+}
+.sw-ctx {
+  margin: 2px 0 12px -7px;
+}
+/* A SmartBlock button with Icon=add, as on the template-lab Claim page ("⊕ Add Entry"). */
+.tl-sbbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-size: 13px;
+  color: #182026;
+  background: linear-gradient(#fff, #f5f8fa);
+  box-shadow:
+    inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+}
+
+/* Key caps: right of the menu the keys open, clear of the headline band. */
+[data-ref="key-slash"] {
+  left: 1010px;
+  top: 470px;
+}
+[data-ref="key-c"] {
+  left: 1090px;
+  top: 470px;
+}
+
+/* The end card's glimpse: episode 2's claim page with its context card open. */
+.gl {
+  padding: 24px 26px;
+  font-size: 16px;
+  color: var(--roam-text);
+}
+.gl-title {
+  font-size: 25px;
+  font-weight: 460;
+  letter-spacing: -0.01em;
+}
+.gl-ctx {
+  margin: 6px 0 12px -7px;
+}
+.gl-card {
+  display: flex;
+  gap: 14px;
+  padding: 12px;
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.15),
+    0 0 0 rgba(16, 22, 26, 0);
+}
+.gl-tabs {
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.gl-tab {
+  padding: 4px 10px;
+  border-radius: 3px;
+  white-space: nowrap;
+  font-size: 14px;
+}
+.gl-tab.on {
+  background: rgba(19, 124, 189, 0.2);
+  color: #106ba3;
+}
+.gl-ctl {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 12px;
+}
+.gl-sw {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #182026;
+}
+.gl-sw i {
+  width: 22px;
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(167, 182, 194, 0.5);
+}
+.gl-add {
+  padding: 3px 8px;
+  border-radius: 3px;
+  text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.2);
+  color: #182026;
+}
+.gl-row {
+  padding-top: 4px;
+  font-size: 14px;
+  line-height: 1.45;
+  color: var(--k);
+}

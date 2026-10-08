@@ -1,0 +1,36 @@
+/* Episode 2: the page column, the card swap and the end card's glimpse of episode 3.
+   The series look is in ../shared/skin.css, the context card and dialogs in
+   ../shared/parts-context.css. */
+
+/* A narrower page column, so the context card fits a close shot. */
+.k-rm-page {
+  padding-right: 768px;
+}
+
+/* One of the card's two states, hidden. */
+.gone {
+  display: none !important;
+}
+
+/* The end card's glimpse: episode 3's paper page, imported from Zotero. */
+.gl {
+  height: 100%;
+  box-sizing: border-box;
+  -webkit-mask-image: linear-gradient(#000 72%, transparent 96%);
+  mask-image: linear-gradient(#000 72%, transparent 96%);
+  padding: 24px 26px;
+  font-size: 16px;
+  color: var(--roam-text);
+}
+.gl-title {
+  margin-bottom: 14px;
+  font-size: 25px;
+  font-weight: 460;
+  letter-spacing: -0.01em;
+}
+.gl .k-row {
+  font-size: 15px;
+}
+.gl-attr {
+  font-weight: 650;
+}

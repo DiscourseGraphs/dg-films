@@ -1,0 +1,83 @@
+body {
+  background: #eef1f5;
+  font-family: Inter, system-ui, sans-serif;
+  color: #1f2733;
+}
+.mo-stage {
+  background: radial-gradient(1200px 700px at 50% 40%, #f7f9fc, #e6eaf0);
+}
+.card {
+  position: absolute;
+  width: 420px;
+  border-radius: 16px;
+  background: #fff;
+  padding: 28px;
+  box-sizing: border-box;
+  border: 1px solid rgba(20, 24, 33, 0.09);
+  box-shadow:
+    0 1px 2px rgba(20, 24, 33, 0.06),
+    0 12px 32px rgba(20, 24, 33, 0.08),
+    0 48px 120px rgba(20, 24, 33, 0.12);
+}
+.card h2 {
+  margin: 0 0 14px;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+.field {
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid #d5dbe5;
+  background: #fbfcfe;
+  padding: 0 14px;
+  display: flex;
+  align-items: center;
+  font:
+    500 15px "JetBrains Mono",
+    monospace;
+}
+.btn {
+  margin-top: 16px;
+  height: 44px;
+  width: 150px;
+  border-radius: 10px;
+  background: #2c62c9;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 15px;
+}
+.btn svg {
+  width: 18px;
+  height: 18px;
+  fill: none;
+  stroke: #fff;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid #e3e7ed;
+  font-size: 16px;
+  font-weight: 500;
+}
+.dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid #9aa4b5;
+  box-sizing: border-box;
+  flex: none;
+}
+.row.on .dot {
+  border-color: #15805a;
+  background: #15805a;
+}

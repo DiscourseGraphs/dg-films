@@ -1,0 +1,10 @@
+/* {{name}}: this film's own look. The kit (kit/kit.css) is loaded first and draws
+   windows, Roam, popups, GitHub, Linear, the terminal, the player, the lockup and
+   the rail. Put only what is specific to this film here.
+
+   To re-theme a kit part, redefine its token (the full list is the :root block at
+   the top of kit/kit.css):
+
+   :root { --blue: #1f6feb; --stage-bg: #f4f6f9; }
+
+   Kit classes all start with k-. Name this film's own classes anything else. */

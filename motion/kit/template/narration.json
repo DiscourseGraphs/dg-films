@@ -1,0 +1,11 @@
+{
+  "voice": "af_heart",
+  "speed": 0.88,
+  "lines": [
+    { "id": "open-1", "beat": "open", "at": 0.8, "text": "Say what this film is about, in one line." },
+    { "id": "feature-1", "beat": "feature", "at": 0.8, "text": "Name the feature." },
+    { "id": "feature-2", "beat": "feature", "at": 4.0, "text": "Say what to look at." },
+    { "id": "feature-3", "beat": "feature", "at": 9.0, "text": "Say what happened." },
+    { "id": "close-1", "beat": "close", "at": 0.8, "text": "Say the name once more." }
+  ]
+}

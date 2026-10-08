@@ -1,0 +1,105 @@
+/* Episode 3: the sidebar that opens, the citation's two states, the key caps and the
+   end card's glimpse of episode 4. ZoteroRoam's parts are in ../shared/parts-zotero.css. */
+
+/* Roam's layout: the top bar and the page belong to the main column; the right
+   sidebar runs the full height beside them and slides in as --sw opens. */
+.k-roam {
+  --sw: 420px;
+  overflow: hidden;
+}
+.k-rm-top,
+.k-rm-main {
+  right: var(--sw);
+}
+.tl-side {
+  top: 0;
+  right: calc(var(--sw) - 420px);
+  width: 420px;
+  padding: 14px 14px 0 22px;
+  z-index: 4;
+}
+.tl-outline h1 {
+  font-size: 28px;
+}
+
+/* An attribute's name, and a link inside a value. */
+.tl-attr {
+  font-weight: 650;
+}
+.tl-lk {
+  color: #137cbd;
+  word-break: break-word;
+}
+/* A success callout (`> [!success]`), green where the info callout is blue. */
+.tl-callout.ok {
+  border-left-color: #0f9960;
+  background: #e2f3ea;
+  color: #0d8050;
+}
+.tl-callout.ok .bpi {
+  color: #0f9960;
+}
+
+/* The citation: typed while editing, then the chip. */
+.morph .nd {
+  display: none;
+}
+.morph.done .nd,
+.morph.made .nd {
+  display: inline;
+}
+.morph.done .cite-raw,
+.morph.made .cite-raw {
+  display: none;
+}
+.cpk {
+  display: none;
+}
+.cpk.on {
+  display: inline;
+}
+.gone {
+  display: none !important;
+}
+.morph .tl-src {
+  --flash: 0;
+  box-shadow: 0 0 0 calc(var(--flash) * 5px) rgba(45, 114, 210, calc(var(--flash) * 0.28));
+}
+
+/* Key caps: under the note, clear of the headline band and of the sidebar that
+   slides in from the right. */
+[data-ref="key-esc"],
+[data-ref="key-shift"] {
+  left: 150px;
+  top: 540px;
+}
+
+/* The end card's glimpse: episode 4's canvas. */
+.gl4 {
+  position: relative;
+  height: 100%;
+  background: #f8f9fa;
+}
+.gl4-card {
+  position: absolute;
+  box-sizing: border-box;
+  padding: 12px 14px;
+  border-radius: 10px;
+  font-size: 15px;
+  line-height: 1.35;
+  font-weight: 500;
+}
+.gl4-ar {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.gl4-lbl {
+  position: absolute;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: #f8f9fa;
+  font-size: 14px;
+  font-weight: 600;
+  color: #099268;
+}

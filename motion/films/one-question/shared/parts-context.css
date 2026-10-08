@@ -1,0 +1,461 @@
+/* Styles for ./parts-context.ts: Blueprint 3 as the extension renders it, under
+   template-lab's roam/css where that applies. Sizes are the product's CSS px. */
+
+.cx-bp {
+  font-size: 14px;
+  line-height: 1.28581;
+  color: #182026;
+}
+.cx-ic {
+  display: inline-flex;
+  flex: none;
+  color: #5c7080;
+}
+.cx-ic svg {
+  display: block;
+  fill: currentColor;
+}
+
+/* ------------------------------------------------------------ buttons */
+.cx-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  box-sizing: border-box;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 14px;
+  vertical-align: middle;
+  white-space: nowrap;
+  background-color: #f5f8fa;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.8), hsla(0, 0%, 100%, 0));
+  box-shadow:
+    inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+  color: #182026;
+}
+.cx-btn.min {
+  background: none;
+  box-shadow: none;
+}
+.cx-btn.outl {
+  border: 1px solid rgba(24, 32, 38, 0.2);
+}
+.cx-btn.sm {
+  min-width: 24px;
+  min-height: 24px;
+  padding: 0 7px;
+}
+.cx-btn.only {
+  padding: 5px;
+}
+.cx-btn.sm.only {
+  padding: 0 4px;
+}
+.cx-btn.fill {
+  display: flex;
+  width: 100%;
+}
+.cx-btn.hot {
+  background-color: #ebf1f5;
+}
+.cx-btn.min.hot {
+  background: rgba(167, 182, 194, 0.3);
+}
+.cx-btn.primary {
+  background-color: #137cbd;
+  background-image: linear-gradient(180deg, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0));
+  box-shadow:
+    inset 0 0 0 1px rgba(16, 22, 26, 0.4),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.2);
+  color: #fff;
+}
+.cx-btn.primary.off {
+  background-color: rgba(19, 124, 189, 0.5);
+  background-image: none;
+  box-shadow: none;
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.cx-btn.off:not(.primary) {
+  color: rgba(92, 112, 128, 0.6);
+}
+.cx-btn.primary .cx-ic {
+  color: #fff;
+}
+.cx-btn.m-0 {
+  margin: 0;
+}
+
+/* ------------------------------------------------------------ the context card */
+.cx-card {
+  margin: 12px 0;
+  padding: 20px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.15);
+}
+.cx-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
+.cx-tabs {
+  display: flex;
+  align-items: stretch;
+}
+.cx-tablist {
+  display: flex;
+  flex: none;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 150px;
+}
+.cx-tab {
+  padding: 0 10px;
+  line-height: 30px;
+  border-radius: 3px;
+  white-space: nowrap;
+  color: #182026;
+}
+.cx-tab.on {
+  background: rgba(19, 124, 189, 0.2);
+  color: #106ba3;
+}
+.cx-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: auto;
+  padding: 8px 8px 0;
+  box-sizing: border-box;
+  width: 100%;
+}
+.cx-switch {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 4px;
+}
+.cx-switch-ind {
+  position: relative;
+  width: 28px;
+  height: 16px;
+  border-radius: 8px;
+  background: rgba(167, 182, 194, 0.5);
+}
+.cx-switch-ind::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.2),
+    0 1px 1px rgba(16, 22, 26, 0.2);
+}
+.cx-panel {
+  flex: 1;
+  min-width: 0;
+  padding-left: 20px;
+}
+.cx-rv-in {
+  position: relative;
+}
+.cx-rv-icons {
+  position: absolute;
+  right: 0;
+  top: -4px;
+  display: flex;
+}
+.cx-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.cx-hcell {
+  height: 34px;
+  padding: 0 8px;
+  border-bottom: 1px solid rgba(16, 22, 26, 0.15);
+}
+.cx-hflex {
+  display: flex;
+}
+.cx-filter .cx-ic svg {
+  width: 12px;
+  height: 12px;
+}
+.cx-cell {
+  padding: 8px;
+  border-bottom: 1px solid rgba(16, 22, 26, 0.08);
+}
+.cx-a {
+  color: var(--k, #106ba3);
+}
+.cx-del {
+  float: right;
+  visibility: hidden;
+}
+tr.hot .cx-cell {
+  background: rgba(191, 204, 214, 0.3);
+}
+tr.hot .cx-del {
+  visibility: visible;
+}
+.cx-meta {
+  padding-top: 6px;
+  font-size: 12px;
+  color: #5c7080;
+}
+.cx-meta-in {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cx-meta-i {
+  display: inline-flex;
+  align-items: center;
+  font-style: italic;
+}
+.cx-pager {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.cx-page {
+  padding: 0 6px;
+}
+
+/* ------------------------------------------------------------ dialogs */
+/* Blueprint's dialog container centres the dialog in the window. */
+.cx-dlgwrap {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+}
+/* template-lab's "Dialog Prompt" restyle of .roamjs-canvas-dialog (roam/css X8V4gy32s). */
+.cx-dlg {
+  width: 750px;
+  border: 1px solid #d6d7db;
+  border-radius: 0.5rem;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.1),
+    0 4px 8px rgba(16, 22, 26, 0.2),
+    0 18px 46px 6px rgba(16, 22, 26, 0.2);
+  overflow: visible;
+}
+.cx-dlg-body {
+  padding: 2.75rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background: #fff;
+}
+.cx-dlg-foot {
+  padding: 0.85rem 2.75rem;
+  border-top: 1px solid #eee;
+  border-radius: 0 0 0.5rem 0.5rem;
+  background: rgb(249, 250, 251);
+}
+.cx-dlg-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+.cx-dlg-actions.rev {
+  flex-direction: row-reverse;
+}
+.cx-grow {
+  flex: 1;
+}
+/* The footer's first button, painted by template-lab's css. */
+.cx-dlg-actions > .cx-btn.tl1st {
+  margin-left: 12px;
+  background: #85adff;
+  box-shadow: none;
+  color: #fafafa;
+  font-weight: 700;
+}
+.cx-dlg-actions > .cx-btn {
+  font-weight: 700;
+}
+.cx-col {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.cx-callout {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 10px 12px 9px 40px;
+  border-radius: 3px;
+  background: rgba(19, 124, 189, 0.15);
+}
+.cx-callout .cx-ic {
+  position: absolute;
+  left: 10px;
+  top: 9px;
+  padding: 0;
+  border-radius: 2px;
+  background: #106ba3;
+  color: #fff;
+}
+.cx-callout h4 {
+  margin: 0;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 600;
+  color: #106ba3;
+}
+.cx-srctitle {
+  word-break: break-word;
+}
+.cx-label {
+  display: block;
+}
+.cx-lblpop,
+.cx-anchor {
+  position: relative;
+  display: inline-block;
+}
+.cx-anchor.block,
+.cx-taline {
+  display: block;
+}
+.cx-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  height: 30px;
+  padding: 0 10px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow:
+    inset 0 0 0 1px rgba(16, 22, 26, 0.15),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
+}
+.cx-input.focus {
+  box-shadow:
+    0 0 0 1px #137cbd,
+    0 0 0 3px rgba(19, 124, 189, 0.3),
+    inset 0 1px 1px rgba(16, 22, 26, 0.2);
+}
+.cx-ph {
+  position: absolute;
+  left: 10px;
+  color: rgba(92, 112, 128, 0.6);
+}
+.cx-caret {
+  display: inline-block;
+  width: 1.5px;
+  height: 17px;
+  margin-left: 1px;
+  background: #182026;
+  opacity: 0;
+}
+.cx-caret.on {
+  opacity: 1;
+}
+.cx-menupop {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  margin-top: 2px;
+  z-index: 5;
+}
+.cx-menu {
+  margin: 0;
+  padding: 5px;
+  min-width: 180px;
+  list-style: none;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.1),
+    0 2px 4px rgba(16, 22, 26, 0.2),
+    0 8px 24px rgba(16, 22, 26, 0.2);
+}
+.cx-acpop {
+  right: 0;
+}
+.cx-acpop .cx-menu {
+  max-width: 28rem;
+}
+.cx-mi {
+  padding: 5px 7px;
+  line-height: 20px;
+  border-radius: 2px;
+}
+.cx-mi.hot {
+  background: rgba(167, 182, 194, 0.3);
+}
+.cx-mi.on {
+  background: #137cbd;
+  color: #fff;
+}
+.cx-mi-t.ell {
+  white-space: nowrap;
+}
+
+/* ------------------------------------------------------------ toasts */
+.cx-toaster {
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  top: 20px;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+.cx-toast {
+  display: flex;
+  align-items: center;
+  min-width: 300px;
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.1),
+    0 2px 4px rgba(16, 22, 26, 0.2),
+    0 8px 24px rgba(16, 22, 26, 0.2);
+}
+.cx-toast.success {
+  background: #0f9960;
+  color: #fff;
+}
+.cx-toast-msg {
+  flex: 1;
+  padding: 11px;
+}
+.cx-toast-btns .cx-ic {
+  color: hsla(0, 0%, 100%, 0.7);
+}
+
+/* ------------------------------------------------------------ the film's tip chip */
+.oq-tip {
+  position: absolute;
+  left: 50%;
+  bottom: 54px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: rgba(31, 42, 55, 0.86);
+  color: #fff;
+  font-size: 23px;
+  font-weight: 560;
+  white-space: nowrap;
+  translate: -50% 0;
+  opacity: 0;
+  z-index: 62;
+}

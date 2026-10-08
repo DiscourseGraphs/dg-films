@@ -1,0 +1,11 @@
+{
+  "voice": "af_heart",
+  "speed": 0.9,
+  "lines": [
+    { "id": "title-1", "beat": "title", "at": 0.8, "text": "Discourse Graphs, for Roam." },
+    { "id": "page-1", "beat": "page", "at": 0.8, "text": "Notes live in blocks." },
+    { "id": "search-1", "beat": "search", "at": 1.0, "text": "Search finds the node." },
+    { "id": "share-1", "beat": "share", "at": 0.8, "text": "Share it with the team." },
+    { "id": "outro-1", "beat": "outro", "at": 0.8, "text": "Discourse Graphs for Roam." }
+  ]
+}

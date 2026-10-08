@@ -1,0 +1,549 @@
+/* One Question: the series look. Film overlays first (headlines, series mark,
+   key caps, end card), then the template-lab skin over the kit's Roam. */
+
+/* ------------------------------------------------------------ headlines */
+.hl-scrim {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 200px;
+  background: linear-gradient(
+    rgba(240, 243, 247, 0.98) 0%,
+    rgba(240, 243, 247, 0.96) 52%,
+    rgba(240, 243, 247, 0.7) 74%,
+    rgba(240, 243, 247, 0) 100%
+  );
+  z-index: 30;
+}
+.hl {
+  position: absolute;
+  left: 80px;
+  right: 80px;
+  top: 40px;
+  text-align: center;
+  z-index: 40;
+}
+.hl-t {
+  font-size: 44px;
+  line-height: 1.12;
+  font-weight: 720;
+  letter-spacing: -0.028em;
+  color: var(--ink);
+}
+.hl .w {
+  display: inline-block;
+  opacity: 0;
+}
+
+/* The series mark, top left, for the whole film. */
+.oq-mark {
+  position: absolute;
+  left: 20px;
+  top: 14px;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(244, 246, 249, 0.92);
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.06);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  color: #4a5562;
+  z-index: 45;
+}
+.oq-mark b {
+  font-weight: 650;
+}
+.oq-mark span {
+  font-weight: 600;
+  color: #9aa6b2;
+}
+
+/* A key the viewer should see pressed. */
+.oq-key {
+  position: absolute;
+  min-width: 52px;
+  height: 52px;
+  padding: 0 14px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font: 650 28px/1 "JetBrains Mono", monospace;
+  color: #1f2a37;
+  background: linear-gradient(#ffffff, #f1f4f7);
+  border: 1px solid #c9d1da;
+  border-bottom-width: 3px;
+  border-radius: 7px;
+  box-shadow: 0 6px 16px rgba(16, 22, 26, 0.16);
+  opacity: 0;
+  z-index: 60;
+}
+.oq-key.down {
+  border-bottom-width: 1px;
+  margin-top: 2px;
+  background: #e9eef3;
+}
+
+/* The rewind cue. */
+.oq-rewind {
+  position: absolute;
+  left: 595px;
+  top: 335px;
+  width: 90px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: rgba(31, 42, 55, 0.78);
+  color: #fff;
+  opacity: 0;
+  z-index: 65;
+}
+
+/* ------------------------------------------------------------ end card */
+.oq-end {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  z-index: 70;
+}
+.ec-veil {
+  position: absolute;
+  inset: 0;
+  background: rgba(244, 246, 249, 0.97);
+  backdrop-filter: blur(6px);
+}
+.ec-body {
+  position: absolute;
+  left: 96px;
+  right: 96px;
+  top: 150px;
+  display: flex;
+  align-items: center;
+  gap: 56px;
+}
+.ec-next {
+  flex: 1 1 0;
+}
+.ec-label {
+  font-size: 20px;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #2d72d2;
+}
+.ec-title {
+  margin-top: 14px;
+  font-size: 50px;
+  line-height: 1.08;
+  font-weight: 760;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+.ec-glimpse {
+  flex: none;
+  width: 470px;
+  height: 290px;
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.08),
+    0 18px 50px rgba(16, 22, 26, 0.18);
+}
+.ec-foot {
+  position: absolute;
+  left: 96px;
+  right: 96px;
+  bottom: 56px;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: 28px;
+  row-gap: 6px;
+  align-items: center;
+}
+.ec-rail {
+  grid-row: 1 / span 2;
+  display: flex;
+  gap: 9px;
+}
+.ec-rail i {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid #b8c2cc;
+  box-sizing: border-box;
+}
+.ec-rail i.done {
+  background: #b8c2cc;
+}
+.ec-rail i.now {
+  background: #2d72d2;
+  border-color: #2d72d2;
+}
+.ec-src {
+  font-size: 21px;
+  color: #4a5562;
+}
+.ec-cta {
+  font-size: 21px;
+  font-weight: 650;
+  color: #1f2a37;
+}
+
+/* ------------------------------------------------------------ template-lab skin */
+/* References under the template's roam/css (page X8V4gy32s): brackets hidden,
+   an icon before the link, code and text in the type's color, sources in a grey chip. */
+.tl-ref {
+  color: var(--k);
+  white-space: nowrap;
+}
+.tl-ic {
+  color: initial;
+}
+.tl-src {
+  padding: 0 2px;
+  background: rgba(158, 158, 158, 0.337);
+  color: #242424;
+  white-space: nowrap;
+}
+.tl-title .tl-code {
+  color: var(--k);
+}
+.tl-raw {
+  white-space: normal;
+}
+
+/* The discourse context button beside a node page's title. */
+.tl-ctxbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 7px;
+  border-radius: 3px;
+  color: #5c7080;
+}
+.tl-ctxbtn b {
+  margin-right: 4px;
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  color: #182026;
+}
+.tl-ctxbtn b:last-child {
+  margin-right: 0;
+}
+.tl-ctxbtn.hot {
+  background: rgba(167, 182, 194, 0.3);
+}
+
+/* The text-selection button and the node menu (DiscourseNodeMenu.tsx). */
+.tl-selbtn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 8px;
+  box-sizing: border-box;
+  background: #fff;
+  border: 1px solid #d3d8de;
+  border-radius: 4px;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  color: #555;
+  z-index: 31;
+}
+.tl-menu {
+  position: absolute;
+  min-width: 210px;
+  padding: 5px;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.1),
+    0 2px 4px rgba(16, 22, 26, 0.2),
+    0 8px 24px rgba(16, 22, 26, 0.2);
+  font-size: 14px;
+  color: #182026;
+  z-index: 32;
+}
+.tl-mi {
+  display: flex;
+  align-items: center;
+  padding: 5px 7px;
+  line-height: 20px;
+  border-radius: 2px;
+}
+.tl-mi i {
+  flex: none;
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+  border-radius: 50%;
+}
+.tl-mi-t {
+  flex: 1;
+}
+.tl-mi-k {
+  margin-left: 18px;
+  font-family: "JetBrains Mono", monospace;
+  color: #5c7080;
+}
+/* The active row: solid Blueprint blue, white text and letter (real captures). */
+.tl-mi.on {
+  background: #137cbd;
+  color: #fff;
+}
+.tl-mi.on .tl-mi-k {
+  color: #fff;
+}
+.tl-mi.off {
+  color: rgba(92, 112, 128, 0.6);
+}
+
+/* A selection inside a block being edited, swept on with --sel. */
+.tl-sel {
+  --sel: 0;
+  background: linear-gradient(rgba(45, 114, 210, 0.26), rgba(45, 114, 210, 0.26)) no-repeat 0 0 /
+    calc(var(--sel) * 100%) 100%;
+}
+.tl-caret {
+  display: inline-block;
+  width: 2px;
+  height: 1.15em;
+  margin-left: 1px;
+  vertical-align: -0.2em;
+  background: #182026;
+  opacity: 0;
+}
+.tl-caret.on {
+  opacity: 1;
+}
+
+/* A template block's `> [!info]` line: a full-width light-blue band, a solid
+   blue bar, a filled info circle, bold blue smaller text (evidence/cd8OCHcJ7b.png). */
+.k-txt:has(> .tl-callout),
+.k-txt:has(> .tl-embed),
+.k-txt:has(> .tl-slider) {
+  flex: 1;
+}
+.tl-callout {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 12px;
+  border-left: 4px solid #2d72d2;
+  background: #e6f0f8;
+  color: #2463b0;
+  font-size: 0.8em;
+  line-height: 1.5;
+}
+.tl-callout b {
+  font-weight: 700;
+}
+.tl-callout .bpi {
+  flex: none;
+  color: #2d72d2;
+}
+/* An embed-children block's frame (unverified) and a slider. */
+.tl-embed {
+  display: block;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: #f4f6f8;
+  box-shadow: inset 0 0 0 1px #e3e8ed;
+}
+.tl-embed-row {
+  display: flex;
+  align-items: center;
+  height: 22px;
+}
+.tl-embed-row i {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--roam-bullet);
+}
+.tl-slider {
+  display: block;
+  max-width: 260px;
+  padding: 6px 0 0;
+}
+.tl-slider-track {
+  position: relative;
+  display: block;
+  height: 6px;
+  border-radius: 3px;
+  background: #d8e1e8;
+}
+.tl-slider-track i {
+  position: absolute;
+  left: -8px;
+  top: -5px;
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+  background: linear-gradient(#fff, #f5f8fa);
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.2),
+    0 1px 1px rgba(16, 22, 26, 0.2);
+}
+.tl-slider-axis {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #5c7080;
+}
+.tl-slider-axis b {
+  font-weight: 400;
+}
+
+/* Page titles render in regular weight in template-lab (evidence/cd8OCHcJ7b.png). */
+.k-rm-title {
+  font-weight: 460;
+}
+/* The top bar holds no menu, back or forward icons in template-lab captures. */
+.k-rm-top > span.k-rm-ic:nth-of-type(-n + 3) {
+  display: none;
+}
+
+/* The right sidebar as Roam draws it: a plain full-height panel of windows, each
+   headed "▾ Outline of:" with its number and close, pin and filter at the edge. */
+.tl-outline {
+  position: relative;
+  padding: 2px 34px 14px 0;
+}
+.tl-outline-head {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: #5c7080;
+}
+.tl-outline-tools {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  color: #8a9ba8;
+}
+.tl-outline h1 {
+  margin: 12px 0 4px;
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: var(--roam-title);
+}
+.tl-outline .k-blk {
+  font-size: 15px;
+}
+
+/* Pointer shapes over the engine's arrow (pointer() in helpers.ts): an I-beam over
+   text being selected, a hand over buttons and menu rows. */
+.mo-cursor .cur-ibeam,
+.mo-cursor .cur-hand {
+  position: absolute;
+  display: none;
+}
+.mo-cursor[class*="ibeam-"] > svg:first-child,
+.mo-cursor[class*="hand-"] > svg:first-child {
+  visibility: hidden;
+}
+.mo-cursor[class*="ibeam-"] .cur-ibeam,
+.mo-cursor[class*="hand-"] .cur-hand {
+  display: block;
+}
+.cur-ibeam {
+  left: -6px;
+  top: -12px;
+}
+.cur-hand {
+  left: -8px;
+  top: -2px;
+}
+
+/* Right-sidebar windows, stacked newest first. */
+.tl-side {
+  position: absolute;
+  right: 0;
+  top: var(--roam-top-h);
+  bottom: 0;
+  width: 600px;
+  padding: 12px 16px 0;
+  box-sizing: border-box;
+  background: var(--roam-side-bg);
+  border-left: 1px solid var(--roam-side-line);
+  overflow: hidden;
+}
+.tl-sidewin {
+  margin-bottom: 14px;
+  padding: 10px 18px 14px;
+  background: #fff;
+  border-radius: 6px;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.06);
+}
+.tl-sidehead {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: var(--roam-muted);
+}
+.tl-sidehead-t {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.tl-sidewin h1 {
+  margin: 10px 0 2px;
+  font-size: 25px;
+  line-height: 1.3;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: var(--roam-title);
+}
+.tl-sidewin .k-blk {
+  font-size: 15px;
+}
+
+/* A SmartBlock button with Icon=add, as on the template-lab Claim page ("⊕ Add Entry"). */
+.tl-sbbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 6px;
+  padding: 1px 8px;
+  border-radius: 3px;
+  font-size: 13px;
+  color: #182026;
+  background: linear-gradient(#fff, #f5f8fa);
+  box-shadow:
+    inset 0 0 0 1px rgba(16, 22, 26, 0.2),
+    inset 0 -1px 0 rgba(16, 22, 26, 0.1);
+}
+/* The column under a page title that holds the discourse context button and card. */
+.tl-tadd {
+  margin: -12px 0 10px -7px;
+}
+.tl-tadd .cx-card {
+  margin-left: 7px;
+}
+.tl-cardwrap {
+  --open: 0;
+  max-height: calc(var(--open) * 520px);
+  overflow: hidden;
+}

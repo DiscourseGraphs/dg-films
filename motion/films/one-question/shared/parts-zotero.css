@@ -1,0 +1,264 @@
+/* Styles for ./parts-zotero.ts, measured off the captures in
+   tutorial-series/evidence/zotero-Q8piUCWbV/ (shown at about 1x). */
+
+.zr-i {
+  flex: none;
+  display: block;
+}
+
+/* The top-bar icon while ZoteroRoam runs: the open book on a light green square. */
+.zr-top {
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  background: #d3f2d6;
+  color: #394b59;
+}
+
+/* The icon's menu: a Blueprint menu in a popover. */
+.zr-menu {
+  position: absolute;
+  width: 196px;
+  padding: 5px;
+  border-radius: 3px;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.1),
+    0 2px 4px rgba(16, 22, 26, 0.2),
+    0 8px 24px rgba(16, 22, 26, 0.2);
+  font-size: 15px;
+  color: #182026;
+  z-index: 33;
+}
+.zr-mi {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  padding: 6px 7px;
+  line-height: 20px;
+  border-radius: 2px;
+}
+.zr-mi .zr-i {
+  color: #394b59;
+}
+.zr-mi.hot {
+  background: rgba(167, 182, 194, 0.3);
+}
+.zr-beta {
+  margin-left: 6px;
+  padding: 1px 6px;
+  border-radius: 3px;
+  background: rgba(138, 155, 168, 0.2);
+  box-shadow: inset 0 0 0 1px rgba(16, 22, 26, 0.15);
+  font-size: 13px;
+  line-height: 18px;
+  color: #394b59;
+}
+
+/* The search panel: a dialog near the top of the window. */
+.zr-wrap {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 96px;
+  display: flex;
+  justify-content: center;
+  z-index: 2;
+}
+.zr-panel {
+  width: 780px;
+  border-radius: 6px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow:
+    0 0 0 1px rgba(16, 22, 26, 0.1),
+    0 4px 8px rgba(16, 22, 26, 0.2),
+    0 18px 46px 6px rgba(16, 22, 26, 0.2);
+  color: #182026;
+}
+.zr-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  height: 44px;
+  padding: 0 18px;
+  background: #fafafa;
+  border-bottom: 1px solid #e3e6e8;
+  font-size: 14px;
+}
+.zr-rib {
+  flex: none;
+  color: #394b59;
+}
+.zr-q {
+  white-space: pre;
+}
+.zr-caret {
+  width: 1.5px;
+  height: 17px;
+  margin-left: -11px;
+  background: #182026;
+  opacity: 0;
+}
+.zr-caret.on {
+  opacity: 1;
+}
+.zr-grow {
+  flex: 1;
+}
+.zr-qc {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  color: #5c7080;
+}
+.zr-sw {
+  width: 28px;
+  height: 16px;
+  border-radius: 8px;
+  background: rgba(167, 182, 194, 0.5);
+  position: relative;
+}
+.zr-sw::after {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 0 0 1px rgba(16, 22, 26, 0.2);
+}
+.zr-x {
+  display: flex;
+  color: #394b59;
+}
+.zr-body {
+  display: flex;
+  height: 520px;
+}
+.zr-left {
+  width: 466px;
+  flex: none;
+  padding: 22px 26px;
+  box-sizing: border-box;
+  font-size: 15px;
+  line-height: 1.5;
+}
+.zr-title {
+  font-weight: 600;
+}
+.zr-lk {
+  color: #106ba3;
+}
+.zr-pub {
+  color: #5c7080;
+}
+.zr-abs-h {
+  margin: 16px 0 6px;
+}
+.zr-abs {
+  padding: 12px 14px;
+  background: #f4f5f6;
+  font-size: 14.5px;
+  line-height: 1.5;
+}
+.zr-scroll {
+  flex: none;
+  width: 14px;
+  background: #f1f1f1;
+  position: relative;
+}
+.zr-scroll i {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  top: 4px;
+  height: 120px;
+  border-radius: 4px;
+  background: #c8c8c8;
+}
+.zr-right {
+  flex: 1;
+  padding: 18px 16px;
+  background: #f5f6f8;
+  font-size: 16px;
+}
+.zr-copy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 4px 6px;
+}
+.zr-copy span {
+  flex: 1;
+}
+.zr-h {
+  margin: 22px 6px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: #5c7080;
+}
+.zr-act {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 6px;
+  line-height: 22px;
+  border-radius: 3px;
+}
+.zr-act.top {
+  align-items: flex-start;
+}
+.zr-act.top .zr-i {
+  margin-top: 4px;
+}
+.zr-act.hot {
+  background: rgba(167, 182, 194, 0.3);
+}
+.zr-ell {
+  flex: 1;
+}
+.zr-act kbd {
+  padding: 0 6px;
+  border-radius: 4px;
+  box-shadow: inset 0 0 0 1px #c5cbd0;
+  font: 13px/20px inherit;
+  color: #5c7080;
+}
+.zr-gowrap {
+  --open: 0;
+  max-height: calc(var(--open) * 40px);
+  opacity: var(--open);
+  overflow: hidden;
+}
+.zr-gowrap .zr-act {
+  --flash: 0;
+  background: rgba(19, 124, 189, calc(var(--flash) * 0.18));
+}
+
+/* Roam's [[ autocomplete as the capture shows it: a dark list. */
+.rc-menu {
+  position: absolute;
+  width: 395px;
+  padding: 4px 0;
+  border-radius: 6px;
+  background: #26292e;
+  box-shadow: 0 6px 18px rgba(16, 22, 26, 0.25);
+  font-size: 15px;
+  color: #fff;
+  z-index: 33;
+}
+.rc-row {
+  padding: 8px 12px;
+  line-height: 20px;
+}
+.rc-row.hot {
+  background: rgba(255, 255, 255, 0.12);
+}
